@@ -6,7 +6,7 @@ module.exports = {
     description: `Software development company based in the UK`,
     siteUrl: `https://varietylabs.xyz/`,
     language: `en`,
-    color: `#F51D00`,
+    color: `#ffffff`,
   },
   plugins: [
     {
@@ -22,7 +22,7 @@ module.exports = {
         short_name: `Variety Labs`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#F51D00`,
+        theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/assets/icon.png`,
         include_favicon: true,
