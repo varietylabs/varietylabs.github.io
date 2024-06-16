@@ -1,82 +1,56 @@
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
-import { Stack, styled, Typography, Box, Button } from "@mui/material";
 import { Inner } from "../../shared/Inner";
 
-import DevicesOtherIcon from "@mui/icons-material/DevicesOther";
-import BusinessIcon from "@mui/icons-material/Business";
 import Logo from "../../../assets/svg/logo.svg";
 
-const Item = styled(Stack)`
-  background: ${({ theme }) => theme.palette.card.light};
-  border: 1px solid ${({ theme }) => theme.palette.card.main};
-  padding: 1rem;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.75rem;
-
-  ul {
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.5rem;
-  }
-`;
-
 export const About: React.FC = () => (
-  <Box bgcolor={(theme) => theme.palette.background.paper} height="100vh">
-    <Inner
-      pt={{ xs: "2rem", md: "8rem" }}
-      pb={{ xs: "4rem", md: "6rem" }}
-      spacing={"3rem"}
-      alignItems="center"
-      height="100%"
-    >
-      <Logo />
-      <Stack spacing="2rem">
-        <Stack spacing="1rem" direction={{ xs: "column" }} maxWidth="32rem">
-          <Item>
-            <Stack
-              direction="row"
-              spacing="1rem"
-              alignItems="center"
-              mb="0.5rem"
-            >
-              <DevicesOtherIcon sx={{ fontSize: "2rem" }} />
-              <Typography variant="h6">
-                Software Development Services
-              </Typography>
-            </Stack>
-            <Typography color={(theme) => theme.palette.text.secondary}>
-              Our team will take your app from proof-of-concept to a production
-              ready application.
-            </Typography>
-          </Item>
-          <Item>
-            <Stack
-              direction="row"
-              spacing="1rem"
-              alignItems="center"
-              mb="0.5rem"
-            >
-              <BusinessIcon sx={{ fontSize: "2rem" }} />
-              <Typography variant="h6">
-                Startup Consultancy and Advisory
-              </Typography>
-            </Stack>
-            <Typography color={(theme) => theme.palette.text.secondary}>
-              We know what it takes to launch and grow a successful business and
-              can guide you from ideation all the way through.
-            </Typography>
-          </Item>
-        </Stack>
-        <Button
-          variant="contained"
-          href="mailto:contact@varietylabs.xyz"
-          sx={{ height: "3rem", maxWidth: "32rem" }}
-          color="secondary"
-          fullWidth
-        >
-          Get in touch
-        </Button>
+  <Box bgcolor={(theme) => theme.palette.background.default} height="100vh">
+    <Inner spacing={"3rem"} alignItems="center" height="100%" maxWidth="38rem">
+      <Stack
+        width="100%"
+        alignItems="flex-start"
+        borderBottom={(theme) => `1px solid ${theme.palette.divider}`}
+        pt={"2rem"}
+        pb={"1rem"}
+        sx={{ svg: { width: "auto" } }}
+      >
+        <Logo height="3.5rem" width="auto" />
       </Stack>
+      <Stack spacing="2rem">
+        <Typography
+          variant="h1"
+          fontWeight={600}
+          fontSize="1.5rem"
+          lineHeight="2.125rem"
+          maxWidth={{ xs: "100%", sm: "80%" }}
+        >
+          Variety Labs provides software development and advisory services
+        </Typography>
+        <Stack spacing="1rem" direction={{ xs: "column" }} maxWidth="38rem">
+          <Typography color={(theme) => theme.palette.text.secondary}>
+            We turn your ideas from proof-of-concept into production-ready
+            applications. Using the latest technologies, we deliver
+            high-quality, scalable software solutions, including iOS apps and
+            web apps, tailored to your needs.
+          </Typography>
+          <Typography color={(theme) => theme.palette.text.secondary}>
+            Additionally, our consultancy services guide you from ideation to
+            implementation. We offer insights and advice on both technical
+            aspects like engineering and security, in addition to operational
+            support.
+          </Typography>
+        </Stack>
+      </Stack>
+      <Button
+        variant="contained"
+        href="mailto:contact@varietylabs.xyz"
+        sx={{ height: "3rem", fontWeight: 600 }}
+        color="secondary"
+        fullWidth
+      >
+        Get in touch
+      </Button>
     </Inner>
   </Box>
 );

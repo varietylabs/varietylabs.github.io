@@ -23,7 +23,7 @@ const base: ThemeOptions = {
   colors: AppColors,
 
   typography: {
-    fontFamily: ["Iowan Old Style", "serif"].join(","),
+    fontFamily: ["Montserrat", "Helvetica", "sans-serif"].join(","),
     fontSize: 16,
     fontWeightBold: 600,
     fontWeightLight: 200,
@@ -97,9 +97,9 @@ export const theme: ThemeOptions = {
       dark: AppColors.amber[300],
     },
     secondary: {
-      main: AppColors.gray[200],
-      light: AppColors.gray[100],
-      dark: AppColors.gray[300],
+      main: AppColors.gray[100],
+      light: AppColors.gray[50],
+      dark: AppColors.gray[200],
     },
     background: {
       default: "#ffffff",
